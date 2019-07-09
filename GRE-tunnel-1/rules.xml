@@ -28,7 +28,6 @@
         </hip-profiles>
         <action>allow</action>
         <disabled>no</disabled>
-        <log-setting>default</log-setting>
         <profile-setting>
           <group>
           <member>GRE-threats</member>
