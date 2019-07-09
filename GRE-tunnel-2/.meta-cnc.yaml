@@ -51,6 +51,9 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
+  - name: ping-profile
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/interface-management-profile
+    file: ping-profile.xml
   - name: network
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet
     file: network.xml
