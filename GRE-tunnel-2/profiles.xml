@@ -1,84 +1,35 @@
 <virus>
-  <entry name="strict">
-      <decoder>
-        <entry name="smtp">
-          <action>reset-both</action>
-          <wildfire-action>reset-both</wildfire-action>
+        <entry name="GRE-tunnel-strict">
+          <decoder>
+            <entry name="http">
+              <action>reset-both</action>
+              <wildfire-action>reset-both</wildfire-action>
+            </entry>
+            <entry name="smtp">
+              <action>reset-both</action>
+              <wildfire-action>reset-both</wildfire-action>
+            </entry>
+            <entry name="imap">
+              <action>reset-both</action>
+              <wildfire-action>reset-both</wildfire-action>
+            </entry>
+            <entry name="pop3">
+              <action>reset-both</action>
+              <wildfire-action>reset-both</wildfire-action>
+            </entry>
+            <entry name="ftp">
+              <action>reset-both</action>
+              <wildfire-action>reset-both</wildfire-action>
+            </entry>
+            <entry name="smb">
+              <action>reset-both</action>
+              <wildfire-action>reset-both</wildfire-action>
+            </entry>
+          </decoder>
         </entry>
-        <entry name="smb">
-          <action>reset-both</action>
-          <wildfire-action>reset-both</wildfire-action>
-        </entry>
-        <entry name="pop3">
-          <action>reset-both</action>
-          <wildfire-action>reset-both</wildfire-action>
-        </entry>
-        <entry name="imap">
-          <action>reset-both</action>
-          <wildfire-action>reset-both</wildfire-action>
-        </entry>
-        <entry name="http2">
-          <action>reset-both</action>
-          <wildfire-action>reset-both</wildfire-action>
-        </entry>
-        <entry name="http">
-          <action>reset-both</action>
-          <wildfire-action>reset-both</wildfire-action>
-        </entry>
-        <entry name="ftp">
-          <action>reset-both</action>
-          <wildfire-action>reset-both</wildfire-action>
-        </entry>
-      </decoder>
-    </entry>
 </virus>
-<vulnerability>
-  <entry name="best-practices-gre">
-      <rules>
-        <entry name="block-critical-high-medium">
-          <action>
-            <reset-both/>
-          </action>
-          <vendor-id>
-            <member>any</member>
-          </vendor-id>
-          <severity>
-            <member>critical</member>
-            <member>high</member>
-            <member>medium</member>
-          </severity>
-          <cve>
-            <member>any</member>
-          </cve>
-          <threat-name>any</threat-name>
-          <host>any</host>
-          <category>any</category>
-          <packet-capture>single-packet</packet-capture>
-        </entry>
-        <entry name="default-low-info">
-          <action>
-            <default/>
-          </action>
-          <vendor-id>
-            <member>any</member>
-          </vendor-id>
-          <severity>
-            <member>low</member>
-            <member>informational</member>
-          </severity>
-          <cve>
-            <member>any</member>
-          </cve>
-          <threat-name>any</threat-name>
-          <host>any</host>
-          <category>any</category>
-          <packet-capture>disable</packet-capture>
-        </entry>
-      </rules>
-    </entry>
-</vulnerability>
 <spyware>
-  <entry name="best-practices-gre">
+      <entry name="best-practices-gre">
       <botnet-domains>
         <lists>
           <entry name="default-paloalto-dns">
@@ -128,24 +79,54 @@
       </rules>
     </entry>
 </spyware>
-<file-blocking>
-  <entry name="alert">
+<vulnerability>
+    <entry name="best-practices-gre">
       <rules>
-        <entry name="alert">
-          <application>
+        <entry name="block-critical-high-medium">
+          <action>
+            <reset-both/>
+          </action>
+          <vendor-id>
             <member>any</member>
-          </application>
-          <file-type>
+          </vendor-id>
+          <severity>
+            <member>critical</member>
+            <member>high</member>
+            <member>medium</member>
+          </severity>
+          <cve>
             <member>any</member>
-          </file-type>
-          <direction>both</direction>
-          <action>alert</action>
+          </cve>
+          <threat-name>any</threat-name>
+          <host>any</host>
+          <category>any</category>
+          <packet-capture>single-packet</packet-capture>
+        </entry>
+        <entry name="default-low-info">
+          <action>
+            <default/>
+          </action>
+          <vendor-id>
+            <member>any</member>
+          </vendor-id>
+          <severity>
+            <member>low</member>
+            <member>informational</member>
+          </severity>
+          <cve>
+            <member>any</member>
+          </cve>
+          <threat-name>any</threat-name>
+          <host>any</host>
+          <category>any</category>
+          <packet-capture>disable</packet-capture>
         </entry>
       </rules>
-      </entry>
-</file-blocking>
+    </entry>
+</vulnerability>
 <url-filtering>
-  <credential-enforcement>
+ <entry name="best-practices-gre">
+      <credential-enforcement>
         <mode>
           <disabled/>
         </mode>
@@ -295,4 +276,21 @@
         <member>web-based-email</member>
         <member>web-hosting</member>
       </alert>
+    </entry>
 <url-filtering> 
+<file-blocking>
+  <entry name="Alert">
+    <rules>
+      <entry name="Alert">
+        <application>
+          <member>any</member>
+        </application>
+        <file-type>
+          <member>any</member>
+        </file-type>
+        <direction>both</direction>
+        <action>alert</action>
+      </entry>
+    </rules>
+  </entry>
+</file-blocking>

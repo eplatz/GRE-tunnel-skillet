@@ -3,7 +3,7 @@
 # unique snippet name
 name: GRE-tunnel-2
 # label used for menu selection
-label: GRE-tunnel-label
+label: GRE-tunnel-2
 description: Skillet for GRE-tunnel-configuration
 
 # type of device configuration
