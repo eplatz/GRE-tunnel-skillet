@@ -1,0 +1,9 @@
+<units>
+        <entry name="tunnel.1">
+          <comment>GRE tunnel</comment>
+          <ip>
+            <entry name="192.168.1.1/24"/>
+          </ip>
+          <interface-management-profile>ping</interface-management-profile>
+        </entry>
+      </units>

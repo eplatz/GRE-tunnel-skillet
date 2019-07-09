@@ -1,0 +1,67 @@
+ <entry name="default" admin="admin" time="2019/07/01 10:36:45">
+        <protocol>
+          <bgp>
+            <enable>no</enable>
+            <dampening-profile>
+              <entry name="default">
+                <cutoff>1.25</cutoff>
+                <reuse>0.5</reuse>
+                <max-hold-time>900</max-hold-time>
+                <decay-half-life-reachable>300</decay-half-life-reachable>
+                <decay-half-life-unreachable>900</decay-half-life-unreachable>
+                <enable>yes</enable>
+              </entry>
+            </dampening-profile>
+            <routing-options>
+              <graceful-restart>
+                <enable>yes</enable>
+              </graceful-restart>
+            </routing-options>
+          </bgp>
+          <rip>
+            <enable>no</enable>
+          </rip>
+          <ospf>
+            <enable>no</enable>
+          </ospf>
+          <ospfv3>
+            <enable>no</enable>
+          </ospfv3>
+        </protocol>
+        <interface admin="admin" time="2019/07/01 10:36:45">
+          <member>{{ eth_interface_untrust }}</member>
+          <member>{{ eth_interface_trust }}</member>
+          <member>tunnel.1</member>
+        </interface>
+        <ecmp>
+          <algorithm>
+            <ip-modulo/>
+          </algorithm>
+        </ecmp>
+        <routing-table>
+          <ip>
+            <static-route>
+              <entry name="186-to-184">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <nexthop>
+                  <ip-address>10.1.1.1</ip-address>
+                </nexthop>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>{{ eth_interface_untrust }}</interface>
+                <metric>1</metric>
+                <admin-dist>10</admin-dist>
+                <destination>10.1.3.0/24</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+            </static-route>
+          </ip>
+        </routing-table>
+      </entry>
