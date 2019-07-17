@@ -1,20 +1,20 @@
-<entry name="GRE-threats">
+<entry name="POC_Best_Practice">
         <virus>
-          <member>strict</member>
+          <member>Outbound-AV</member>
         </virus>
         <spyware>
-          <member>best-practices-gre</member>
+          <member>Outbound-AS</member>
         </spyware>
         <vulnerability>
-          <member>best-practices-gre</member>
+          <member>Outbound-VP</member>
         </vulnerability>
         <url-filtering>
-          <member>best-practices-gre</member>
+          <member>Alert-Only-URL</member>
         </url-filtering>
         <file-blocking>
-          <member>alert</member>
+          <member>Alert-Only-FB</member>
         </file-blocking>
         <wildfire-analysis>
-          <member>default</member>
+          <member>Outbound-WF</member>
         </wildfire-analysis>
       </entry>

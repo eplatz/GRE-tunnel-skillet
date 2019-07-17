@@ -1,36 +1,22 @@
-<entry name="traffic" uuid="d091af81-126a-4778-8b71-ca40115be6f4">
+<entry name="Allow-All" uuid="747fe4a2-5226-45c0-b506-d1b954ea5707">
+        <source>
+          <member>any</member>
+        </source>
         <to>
           <member>any</member>
         </to>
         <from>
           <member>any</member>
         </from>
-        <source>
-          <member>any</member>
-        </source>
         <destination>
           <member>any</member>
         </destination>
-        <source-user>
-          <member>any</member>
-        </source-user>
-        <category>
-          <member>any</member>
-        </category>
         <application>
           <member>any</member>
         </application>
         <service>
           <member>any</member>
         </service>
-        <hip-profiles>
-          <member>any</member>
-        </hip-profiles>
         <action>allow</action>
         <disabled>no</disabled>
-        <profile-setting>
-          <group>
-          <member>GRE-threats</member>
-          </group>
-        </profile-setting>
       </entry>

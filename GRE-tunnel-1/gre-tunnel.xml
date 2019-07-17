@@ -1,14 +1,14 @@
- <entry name="GRE-tunnel-186">
+<entry name="tunnel1">
         <local-address>
-          <ip>10.1.1.1/24</ip>
-          <interface>{{ eth_interface_untrust }}</interface>
+          <ip>10.10.10.1/24</ip>
+          <interface>{{ eth_interface_trust }}</interface>
         </local-address>
         <peer-address>
-          <ip>10.1.1.2</ip>
+          <ip>10.10.10.2</ip>
         </peer-address>
         <keep-alive>
           <enable>yes</enable>
         </keep-alive>
         <tunnel-interface>tunnel.1</tunnel-interface>
-        <disabled>no</disabled>
-      </entry>
+        <copy-tos>yes</copy-tos>
+</entry>

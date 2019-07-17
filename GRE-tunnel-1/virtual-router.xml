@@ -1,4 +1,4 @@
- <entry name="default" admin="admin" time="2019/07/01 10:36:45">
+<entry name="default">
         <protocol>
           <bgp>
             <enable>no</enable>
@@ -28,35 +28,26 @@
             <enable>no</enable>
           </ospfv3>
         </protocol>
-        <interface admin="admin" time="2019/07/01 10:36:45">
-          <member>{{ eth_interface_untrust }}</member>
+        <interface>
+          <member>{{ eth_interface_untrust}}</member>
           <member>{{ eth_interface_trust }}</member>
           <member>tunnel.1</member>
         </interface>
-        <ecmp>
-          <algorithm>
-            <ip-modulo/>
-          </algorithm>
-        </ecmp>
         <routing-table>
           <ip>
             <static-route>
-              <entry name="184-to-186">
+              <entry name="GRE-Tunnel1">
                 <path-monitor>
                   <enable>no</enable>
                   <failure-condition>any</failure-condition>
                   <hold-time>2</hold-time>
                 </path-monitor>
-                <nexthop>
-                  <ip-address>10.1.1.2</ip-address>
-                </nexthop>
                 <bfd>
                   <profile>None</profile>
                 </bfd>
-                <interface>{{ eth_interface_untrust }}</interface>
-                <metric>1</metric>
-                <admin-dist>10</admin-dist>
-                <destination>10.1.2.0/24</destination>
+                <interface>tunnel.1</interface>
+                <metric>10</metric>
+                <destination>172.2.0.0/16</destination>
                 <route-table>
                   <unicast/>
                 </route-table>
@@ -64,4 +55,9 @@
             </static-route>
           </ip>
         </routing-table>
-      </entry>
+        <ecmp>
+          <algorithm>
+            <ip-modulo/>
+          </algorithm>
+        </ecmp>
+</entry>

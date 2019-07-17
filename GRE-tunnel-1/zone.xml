@@ -1,0 +1,7 @@
+<entry name="GRE-Zone">
+        <network>
+          <layer3>
+            <member>tunnel.1</member>
+          </layer3>
+        </network>
+</entry>
