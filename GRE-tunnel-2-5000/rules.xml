@@ -1,0 +1,22 @@
+<entry name="Allow-All" uuid="747fe4a2-5226-45c0-b506-d1b954ea5707">
+        <source>
+          <member>any</member>
+        </source>
+        <to>
+          <member>any</member>
+        </to>
+        <from>
+          <member>any</member>
+        </from>
+        <destination>
+          <member>any</member>
+        </destination>
+        <application>
+          <member>any</member>
+        </application>
+        <service>
+          <member>any</member>
+        </service>
+        <action>allow</action>
+        <disabled>no</disabled>
+      </entry>

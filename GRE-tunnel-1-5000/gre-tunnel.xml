@@ -1,0 +1,56 @@
+<entry name="tunnel1">
+        <local-address>
+          <ip>10.10.10.1/24</ip>
+          <interface>{{ eth_interface_untrust_tunnel1 }}</interface>
+        </local-address>
+        <peer-address>
+          <ip>10.10.10.2</ip>
+        </peer-address>
+        <keep-alive>
+          <enable>yes</enable>
+        </keep-alive>
+        <tunnel-interface>tunnel.1</tunnel-interface>
+        <copy-tos>yes</copy-tos>
+      </entry>
+<entry name="tunnel2">
+        <local-address>
+          <ip>20.20.20.1/24</ip>
+          <interface>{{ eth_interface_untrust_tunnel2 }}</interface>
+        </local-address>
+        <peer-address>
+          <ip>20.20.20.2</ip>
+        </peer-address>
+        <keep-alive>
+          <enable>yes</enable>
+        </keep-alive>
+        <tunnel-interface>tunnel.2</tunnel-interface>
+        <copy-tos>yes</copy-tos>
+      </entry>
+<entry name="tunnel3">
+        <local-address>
+          <ip>30.30.30.1/24</ip>
+          <interface>{{ eth_interface_untrust_tunnel3 }}</interface>
+        </local-address>
+        <peer-address>
+          <ip>30.30.30.2</ip>
+        </peer-address>
+        <keep-alive>
+          <enable>yes</enable>
+        </keep-alive>
+        <tunnel-interface>tunnel.3</tunnel-interface>
+        <copy-tos>yes</copy-tos>
+      </entry>
+<entry name="tunnel4">
+        <local-address>
+          <ip>40.40.40.1/24</ip>
+          <interface>{{ eth_interface_untrust_tunnel4 }}</interface>
+        </local-address>
+        <peer-address>
+          <ip>40.40.40.2</ip>
+        </peer-address>
+        <keep-alive>
+          <enable>yes</enable>
+        </keep-alive>
+        <tunnel-interface>tunnel.4</tunnel-interface>
+        <copy-tos>yes</copy-tos>
+      </entry>

@@ -1,0 +1,14 @@
+<entry name="tunnel1">
+        <local-address>
+          <ip>10.10.10.2/24</ip>
+          <interface>{{ eth_interface_trust }}</interface>
+        </local-address>
+        <peer-address>
+          <ip>10.10.10.1</ip>
+        </peer-address>
+        <keep-alive>
+          <enable>yes</enable>
+        </keep-alive>
+        <tunnel-interface>tunnel.1</tunnel-interface>
+        <copy-tos>yes</copy-tos>
+</entry>

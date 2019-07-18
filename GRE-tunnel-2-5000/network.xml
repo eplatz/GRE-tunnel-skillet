@@ -1,0 +1,16 @@
+<entry name="{{ eth_interface_trust }}">
+            <layer3>
+              <ip>
+                <entry name="10.10.10.2/24"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>
+<entry name="{{ eth_interface_untrust }}">
+            <layer3>
+              <ip>
+                <entry name="172.2.0.1/16"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>

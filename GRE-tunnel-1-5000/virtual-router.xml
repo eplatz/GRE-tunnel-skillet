@@ -1,0 +1,120 @@
+<entry name="default">
+        <protocol>
+          <bgp>
+            <enable>no</enable>
+            <dampening-profile>
+              <entry name="default">
+                <cutoff>1.25</cutoff>
+                <reuse>0.5</reuse>
+                <max-hold-time>900</max-hold-time>
+                <decay-half-life-reachable>300</decay-half-life-reachable>
+                <decay-half-life-unreachable>900</decay-half-life-unreachable>
+                <enable>yes</enable>
+              </entry>
+            </dampening-profile>
+            <routing-options>
+              <graceful-restart>
+                <enable>yes</enable>
+              </graceful-restart>
+            </routing-options>
+          </bgp>
+          <rip>
+            <enable>no</enable>
+          </rip>
+          <ospf>
+            <enable>no</enable>
+          </ospf>
+          <ospfv3>
+            <enable>no</enable>
+          </ospfv3>
+        </protocol>
+        <interface>
+          <member>{{ eth_interface_untrust_tunnel1 }}</member>
+          <member>{{ eth_interface_untrust_tunnel2 }}</member>
+          <member>{{ eth_interface_untrust_tunnel3 }}</member>
+          <member>{{ eth_interface_untrust_tunnel4 }}</member>
+          <member>{{ eth_interface_trust_tunnel1 }}</member>
+          <member>{{ eth_interface_trust_tunnel2 }}</member>
+          <member>{{ eth_interface_trust_tunnel3 }}</member>
+          <member>{{ eth_interface_trust_tunnel4 }}</member>
+          <member>tunnel.1</member>
+          <member>tunnel.2</member>
+          <member>tunnel.3</member>
+          <member>tunnel.4</member>
+        </interface>
+        <routing-table>
+          <ip>
+            <static-route>
+              <entry name="GRE-Tunnel1">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>tunnel.1</interface>
+                <metric>10</metric>
+                <destination>172.2.0.0/16</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+              <entry name="GRE-Tunnel2">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>tunnel.2</interface>
+                <metric>10</metric>
+                <destination>172.4.0.0/16</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+              <entry name="GRE-Tunnel3">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>tunnel.3</interface>
+                <metric>10</metric>
+                <destination>172.6.0.0/16</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+              <entry name="GRE-Tunnel4">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>tunnel.4</interface>
+                <metric>10</metric>
+                <destination>172.8.0.0/16</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+            </static-route>
+          </ip>
+        </routing-table>
+        <ecmp>
+          <algorithm>
+            <ip-modulo/>
+          </algorithm>
+        </ecmp>
+</entry>
