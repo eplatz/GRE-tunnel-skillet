@@ -1,9 +1,9 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: GRE-tunnel-1
+name: GRE-tunnel-1-5000
 # label used for menu selection
-label: GRE-tunnel-1
+label: GRE-tunnel-1-5000
 description: Skillet for GRE-tunnel-configuration
 
 # type of device configuration
