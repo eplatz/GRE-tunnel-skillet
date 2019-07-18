@@ -2,6 +2,9 @@
         <network>
           <layer3>
             <member>tunnel.1</member>
+            <member>tunnel.2</member>
+            <member>tunnel.3</member>
+            <member>tunnel.4</member>
           </layer3>
         </network>
       </entry>

@@ -1,9 +1,9 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: GRE-tunnel-2
+name: GRE-tunnel-2-5000
 # label used for menu selection
-label: GRE-tunnel-2
+label: GRE-tunnel-2-5000
 description: Skillet for GRE-tunnel-configuration
 
 # type of device configuration
@@ -34,14 +34,34 @@ variables:
     description: Untrusted Zone Name
     default: Untrust-L3
     type_hint: text
-  - name: eth_interface_trust
-    description: Trusted Ethernet Interface
+  - name: eth_interface_trust_tunnel1
+    description: Trusted Ethernet Interface Tunnel 1
     default: ethernet1/14
     type_hint: text
-  - name: eth_interface_untrust
-    description: Untrusted Ethernet Interface
+  - name: eth_interface_untrust_tunnel1
+    description: Untrusted Ethernet Interface Tunnel 1
     default: ethernet1/13
     type_hint: text
+  - name: eth_interface_trust_tunnel2
+    description: Trusted Ethernet Interface Tunnel 2
+    default: ethernet1/16
+    type_hint: text
+  - name: eth_interface_untrust_tunnel2
+    description: Untrusted Ethernet Interface Tunnel 2
+    default: ethernet1/15
+    type_hint: text
+  - name: eth_interface_trust_tunnel3
+    description: Trusted Ethernet Interface Tunnel 3
+    default: ethernet1/18
+  - name: eth_interface_untrust_tunnel3
+    description: Untrusted Ethernet Interface Tunnel 3
+    default: ethernet1/17
+  - name: eth_interface_trust_tunnel4
+    description: Trusted Ethernet Interface Tunnel 4
+    default: ethernet1/20
+  - name: eth_interface_untrust_tunnel4
+    description: Untrusted Ethernet Interface Tunnel 4
+    default: ethernet1/19
    
 # ---------------------------------------------------------------------
 # end of variables section

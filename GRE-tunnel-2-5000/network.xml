@@ -1,4 +1,12 @@
-<entry name="{{ eth_interface_trust }}">
+<entry name="{{ eth_interface_trust_tunnel1 }}">
+            <layer3>
+              <ip>
+                <entry name="172.2.0.1/16"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>
+<entry name="{{ eth_interface_untrust_tunnel1 }}">
             <layer3>
               <ip>
                 <entry name="10.10.10.2/24"/>
@@ -6,10 +14,50 @@
               <interface-management-profile>ping</interface-management-profile>
             </layer3>
           </entry>
-<entry name="{{ eth_interface_untrust }}">
+<entry name="{{ eth_interface_trust_tunnel2 }}">
             <layer3>
               <ip>
-                <entry name="172.2.0.1/16"/>
+                <entry name="172.4.0.1/16"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>
+<entry name="{{ eth_interface_untrust_tunnel2 }}">
+            <layer3>
+              <ip>
+                <entry name="20.20.20.2/24"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>
+<entry name="{{ eth_interface_trust_tunnel3 }}">
+            <layer3>
+              <ip>
+                <entry name="172.6.0.1/16"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>
+<entry name="{{ eth_interface_untrust_tunnel3 }}">
+            <layer3>
+              <ip>
+                <entry name="30.30.30.2/24"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>
+<entry name="{{ eth_interface_trust_tunnel4 }}">
+            <layer3>
+              <ip>
+                <entry name="172.8.0.1/16"/>
+              </ip>
+              <interface-management-profile>ping</interface-management-profile>
+            </layer3>
+          </entry>
+<entry name="{{ eth_interface_untrust_tunnel4 }}">
+            <layer3>
+              <ip>
+                <entry name="40.40.40.2/24"/>
               </ip>
               <interface-management-profile>ping</interface-management-profile>
             </layer3>

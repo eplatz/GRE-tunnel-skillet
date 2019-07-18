@@ -29,9 +29,18 @@
           </ospfv3>
         </protocol>
         <interface>
-          <member>{{ eth_interface_untrust }}</member>
-          <member>{{ eth_interface_trust }}</member>
+          <member>{{ eth_interface_untrust_tunnel1 }}</member>
+          <member>{{ eth_interface_untrust_tunnel2 }}</member>
+          <member>{{ eth_interface_untrust_tunnel3 }}</member>
+          <member>{{ eth_interface_untrust_tunnel4 }}</member>
+          <member>{{ eth_interface_trust_tunnel1 }}</member>
+          <member>{{ eth_interface_trust_tunnel2 }}</member>
+          <member>{{ eth_interface_trust_tunnel3 }}</member>
+          <member>{{ eth_interface_trust_tunnel4 }}</member>
           <member>tunnel.1</member>
+          <member>tunnel.2</member>
+          <member>tunnel.3</member>
+          <member>tunnel.4</member>
         </interface>
         <routing-table>
           <ip>
@@ -48,6 +57,54 @@
                 <interface>tunnel.1</interface>
                 <metric>10</metric>
                 <destination>172.1.0.0/16</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+              <entry name="GRE-Tunnel2">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>tunnel.2</interface>
+                <metric>10</metric>
+                <destination>172.3.0.0/16</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+              <entry name="GRE-Tunnel3">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>tunnel.3</interface>
+                <metric>10</metric>
+                <destination>172.5.0.0/16</destination>
+                <route-table>
+                  <unicast/>
+                </route-table>
+              </entry>
+              <entry name="GRE-Tunnel4">
+                <path-monitor>
+                  <enable>no</enable>
+                  <failure-condition>any</failure-condition>
+                  <hold-time>2</hold-time>
+                </path-monitor>
+                <bfd>
+                  <profile>None</profile>
+                </bfd>
+                <interface>tunnel.4</interface>
+                <metric>10</metric>
+                <destination>172.7.0.0/16</destination>
                 <route-table>
                   <unicast/>
                 </route-table>
