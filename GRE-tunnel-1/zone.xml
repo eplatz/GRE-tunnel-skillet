@@ -1,7 +1,7 @@
-<entry name="GRE-Zone">
+ <entry name="GRE-Zone">
         <network>
-          <tunnel>
+          <layer3>
             <member>tunnel.1</member>
-          </tunnel>
+          </layer3>
         </network>
       </entry>
