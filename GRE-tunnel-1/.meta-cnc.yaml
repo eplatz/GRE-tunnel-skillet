@@ -54,6 +54,9 @@ snippets:
   - name: ping-profile
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/interface-management-profile
     file: ping-profile.xml
+  - name: zone
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone
+    file: zone.xml
   - name: network
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet
     file: network.xml
@@ -63,9 +66,6 @@ snippets:
   - name: virtual-router
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
     file: virtual-router.xml
-  - name: zone
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone
-    file: zone.xml
   - name: gre-tunnel
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/tunnel/gre
     file: gre-tunnel.xml
