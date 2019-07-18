@@ -1,7 +1,7 @@
 <entry name="tunnel1">
         <local-address>
           <ip>10.10.10.2/24</ip>
-          <interface>{{ eth_interface_trust }}</interface>
+          <interface>{{ eth_interface_untrust }}</interface>
         </local-address>
         <peer-address>
           <ip>10.10.10.1</ip>
